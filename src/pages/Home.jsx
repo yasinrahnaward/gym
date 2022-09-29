@@ -1,8 +1,13 @@
 import React from 'react'
+import AboutSection from '../components/AboutSection'
+import ServicesSection from '../components/ServicesSection'
 
 const Home = () => {
   return (
-    <h1>this is the home Home</h1>
+    <div>
+      <AboutSection></AboutSection>
+      <ServicesSection></ServicesSection>
+    </div>
   )
 }
 
