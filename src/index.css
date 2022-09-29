@@ -1,13 +1,65 @@
-body {
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*{
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+  --deep-dark: #01151b;
+  --deep-dark-1: #021d27;
+  --deep-dark-2: #004d67;
+  --orange : #bb5326;
+  --red: #9c1e0d;
+  --white:#ffffff;
+  --gray:#dddddd;
 }
+html{
+  font-size: 1rem;
+  font-family: 'Roboto Mono';
+  background-color: var(--deep-dark);
+  color: var(--white);
+}
+ul,li,link{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+img, svg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+button{
+  outline: none
+}
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+/* Smooth Scroll  */
+/* [data-scrollbar] {
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--gray-1);
+  .scroll-content {
+    background-color: var(--dark-bg);
+  }
+  .scrollbar-track.scrollbar-track-y {
+    background: var(--deep-dark);
+    .scrollbar-thumb-y {
+      background: var(--gray-1);
+    }
+  }
+} */
