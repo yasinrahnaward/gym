@@ -70,7 +70,6 @@ ul{
         background-color: var(--deep-dark-1);
         align-items: center;
         height: 100vh;
-
         ul,h1{
             display: block;
             padding: 2rem;

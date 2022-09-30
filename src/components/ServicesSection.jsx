@@ -4,12 +4,12 @@ import SectionTitle from './SectionTitle'
 import ServiceSectionItmes from './ServiceSectionItmes'
 
 import {IoIosBicycle ,IoIosFitness}from 'react-icons/io'
-import {IoAlarm ,IoFitness}from 'react-icons/io5'
-import { CgGym } from "react-icons/cg";
 import { GiGymBag } from "react-icons/gi";
 
 const ServiceSectionStyle=styled.div`
 padding: 5rem 2rem;
+
+border-bottom: 2px solid var(--deep-dark-1);
 .ServicesItems{
     display: flex;
     gap:5rem;

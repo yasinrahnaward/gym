@@ -7,6 +7,7 @@ import aboutImageSecond from "../assets/About/about-02.png";
 import styled from 'styled-components';
     const AboutSectionStyle=styled.div`
     padding: 3rem 0;
+    border-bottom: 2px solid var(--deep-dark-1);
     .Container{
         width: 100%;
         display: flex;
@@ -79,8 +80,8 @@ const AboutSection = () => {
                     supportive community.
                 </PargraphText>
                 <div className="aboutButton">
-                    <Buttons outline={false} btnLink="/blogs" btnText="Join Us"></Buttons>
                     <Buttons outline={true} btnLink="/blogs" btnText="read more"></Buttons>
+                    <Buttons outline={false} btnLink="/blogs" btnText="Join Us"></Buttons>
                 </div>
             </div>
             <div className="rightside">
