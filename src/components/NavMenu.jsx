@@ -7,8 +7,11 @@ import { AiOutlineMenu,AiOutlineClose } from "react-icons/ai";
 
 const NavMenuDtyle=styled.div`
 color: var(--gray);
-position:fiexd;
+position:absolute;
+z-index: 50;
 width: 100%;
+background-color: var(--deep-dark-1);
+        opacity: .7;
 .items{
     margin: 0 2rem;
     display: grid;
@@ -25,16 +28,19 @@ ul{
         font-size: 1.3rem;
     }
     li{
-        background-color: var(--deep-dark-1);
-        margin:4% 2%;
-        padding: 3%;
-        border-radius: 5px;
+        
+        margin:0 2%;
+        padding: 5%;
         width: fit-content;
-        cursor: pointer;
         &:hover{
             background-color: var(--deep-dark-2);
             a{
-                color: white;
+                color: var(--orange);
+                padding-left: 1rem;
+                border-left: 3px solid var(--orange);
+                transition: ease-in-out 0.2s;
+                
+        cursor: pointer;
             }
         }
     }
@@ -58,10 +64,13 @@ ul{
     display: none;
 }
 @media only screen and (max-width:768px) {
+    background-color: var(--deep-dark-1);
+        opacity: 1;
     .OpenMenu{
         display: block;
     }
     .items{
+        height: fit-content;
         display: none;
     }
     .responsiveNave{
@@ -72,7 +81,7 @@ ul{
         height: 100vh;
         ul,h1{
             display: block;
-            padding: 2rem;
+            padding: 1rem;
             li{
                 cursor: auto;
                 border-bottom: 1px solid #042d3a;
@@ -83,10 +92,16 @@ ul{
                 justify-content: center;
                 a{
 
-                    padding: 2px;
+                    padding: 1px;
+                    border: none;
                     &:hover{
                         transform: scale(1.1);
                     }
+                }
+                &:hover{
+                    padding-left: 1rem;
+                border-left: 5px solid var(--orange);
+                transition: ease-in-out 0.2s;
                 }
             }
         }
@@ -122,7 +137,7 @@ const NavMenu = () => {
     const [nav, setNav] = useState(true);
 
   return (
-    <NavMenuDtyle className='test'>
+    <NavMenuDtyle>
         {/* navigation bar for larg screen devices */}
 
         <ul className='items'>

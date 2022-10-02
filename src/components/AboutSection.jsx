@@ -6,8 +6,9 @@ import SectionTitle from './SectionTitle'
 import aboutImageSecond from "../assets/About/about-02.png";
 import styled from 'styled-components';
     const AboutSectionStyle=styled.div`
-    padding: 3rem 0;
+    padding: 9rem 0;
     border-bottom: 2px solid var(--deep-dark-1);
+    
     .Container{
         width: 100%;
         display: flex;

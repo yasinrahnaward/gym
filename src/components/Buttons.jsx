@@ -13,11 +13,15 @@ display: inline;
     margin: auto;
     border-radius: 4px;
     border: 2px solid var(--gray);
+    &:hover{
+        transition: 0.1s ease-in-out;
+        background-color: var(--orange);
+        border-color:var(--orange) ;
+        color: var(--gray);
+        
+    }
 }
-&:hover{
-    transition: 0.1s ease-in-out;
-    
-}
+
 a{
     color: ${(props)=>!props.outline?'var(--deep-dark)': 'var(--gray)'};;
 }

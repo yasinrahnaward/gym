@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SectionTitle from './SectionTitle';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore ,{ Navigation, Pagination  } from 'swiper';
@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-console.log(classess);
+
 SwiperCore.use([Navigation]);
 
 const ClassSectionstyle=styled.div`
