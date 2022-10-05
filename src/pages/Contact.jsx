@@ -1,8 +1,11 @@
 import React from 'react'
+import SinglePage from '../components/Blog/SinglePage'
+
+import Articales from '../assets/data/Articales'
 
 const Contact = () => {
   return (
-    <h1>this is the Contact page</h1>
+    <div></div>
   )
 }
 

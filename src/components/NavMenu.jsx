@@ -10,8 +10,8 @@ color: var(--gray);
 position:absolute;
 z-index: 50;
 width: 100%;
-background-color: var(--deep-dark-1);
-        opacity: .7;
+/* background-color: var(--deep-dark-1); */
+        /* opacity: .7; */
 .items{
     margin: 0 2rem;
     display: grid;
@@ -35,7 +35,7 @@ ul{
         &:hover{
             background-color: var(--deep-dark-2);
             a{
-                color: var(--orange);
+                /* color: var(--orange); */
                 padding-left: 1rem;
                 border-left: 3px solid var(--orange);
                 transition: ease-in-out 0.2s;

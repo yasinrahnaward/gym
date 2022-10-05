@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore ,{ Autoplay, Navigation, Pagination  } from 'swiper';
+import  { Autoplay, Navigation, Pagination  } from 'swiper';
 import Typed from 'react-typed'
 import Buttons from './Buttons';
-SwiperCore.use([Navigation]);
 const HeaderStyle=styled.div`
 overflow: hidden;
 border-bottom: 2px solid var(--deep-dark-1);
@@ -30,6 +29,9 @@ border-radius: 5px;
 {
     font-size: 1rem;
     color: var(--white);
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--deep-dark-1);
 }
 .swiper-pagination{
     position: relative;
@@ -41,6 +43,8 @@ border-radius: 5px;
 
 .swiper-pagination-bullet{
     background-color: var(--orange);
+    width: 15px;
+    height: 15px;
 }
 .swiper-pagination-bullet-active{
     background-color: var(--orange);
@@ -56,7 +60,7 @@ justify-content: center;
  }
 .headerSubTitle,.headerTitle,.headerTypedText
 {
-    margin: .5rem;
+    color:var(--white)
 }
 .headerSubTitle{
     font-size: 2rem;
@@ -64,14 +68,10 @@ justify-content: center;
 .headerTitle{
     font-size: 4rem;
     
-    background-color: var(--deep-dark-1);
-    color: var(--gray);
-    opacity: 0.7;
 }
 .headerTypedText{
     font-size: 2rem;
-    background-color: var(--deep-dark-1);
-    padding: 1rem;
+    /* background-color: var(--deep-dark-1); */
 }
 @media only screen and (max-width:768px)
     {
@@ -87,28 +87,36 @@ justify-content: center;
 }
     }
 `;
+const params = {
+    modules: [Autoplay, Pagination,Navigation],
+    pagination: {
+      clickable: true
+    },
+    navigation: {
 
+    },
+    autoplay:{
+        delay:4000
+    },
+    spaceBetween: 30
+  }
 const Header = ({
     heroImages,
     headerSubTitle="Header SubTitle",
     headerTitle="Header Titl",
-    headerTypedText=["Header Typed Text "]
+    headerTypedText=["Header Typed Text "],
+    swiperParameter=params
 
 }) => {
+
+    
 
       return (
         
         <HeaderStyle>
             <div>
             <Swiper
-            modules={[Navigation, Pagination,Autoplay]}
-            spaceBetween={50}
-            slidesPerView={1}
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{
-                delay:4000
-            }}
+            {...swiperParameter}
             
             >
                 {
@@ -119,7 +127,10 @@ const Header = ({
                                 <div className='slide'
                                  style={{backgroundImage: `url(${image})`,
                                  backgroundSize:'cover',
-                                 height:'102vh'
+                                 height:'102vh',
+                                opacity:0.8,
+
+                                 
                                 }}
                                 >
                                     <p className="headerSubTitle">{headerSubTitle}</p>

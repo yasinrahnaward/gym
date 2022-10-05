@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Blogs from './pages/Blogs'
 import Contact from './pages/Contact'
 import Courses from './pages/Courses'
+import SinglePage from './components/Blog/SinglePage';
 function App() {
   return (
 
@@ -18,6 +19,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path='/Courses' element={<Courses/>}/>
+      </Routes>
+      <Routes>
+        <Route path='/SinglePage' element={<SinglePage/>}/>
       </Routes>
       <Routes>
         <Route path='/' element={<Home/>}/>

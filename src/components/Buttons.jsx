@@ -12,6 +12,8 @@ display: inline;
     display: flex;
     margin: auto;
     border-radius: 4px;
+    width: max-content;
+    
     border: 2px solid var(--gray);
     &:hover{
         transition: 0.1s ease-in-out;

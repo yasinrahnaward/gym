@@ -5,9 +5,11 @@ import { IoIosMail } from "react-icons/io";
 import { MdWrongLocation } from "react-icons/md";
 
 import { FaPhoneSquare } from "react-icons/fa";
-import FooterContacItem from './FooterContacItem'
+import FooterContacItem from './Home/FooterContacItem'
 const FooterSectionStyl=styled.div`
 padding: 2rem;
+position: relative;
+display: block;
 .SecondRow{
     padding: 2rem;
     width: 100%;
@@ -38,7 +40,7 @@ padding: 2rem;
 const Footer = () => {
   return (
     <FooterSectionStyl>
-        <div className="container">
+        <div className="Footercontainer">
             <div className="FirstRow">
 
             </div>
