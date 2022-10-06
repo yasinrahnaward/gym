@@ -37,7 +37,7 @@ const ServiceSectionItmes = ({
 }) => {
 
   return (
-    <ItemsStyle>
+    <ItemsStyle >
         <div className="items-icon">{itemIcon}</div>
         <div className="serviceItem-title">{itemTitle}</div>
         <PargraphText>{itemText}</PargraphText>

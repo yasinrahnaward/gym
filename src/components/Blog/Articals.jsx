@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
-import Buttons from '../Buttons';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const ArticalsStyled=styled.div`
 *{
     width: fit-content ;
@@ -39,8 +40,9 @@ margin-top:5rem ;
 
 }
 @media only screen and (max-width:768px) {
+    
     .postContent{
-
+        
         .postImage{
             height: 20vh;
         }
@@ -55,9 +57,15 @@ const Articals = (
     const slice=Articales.ArticalText.slice(0,150);
     console.log(Articales)
     console.log(Articales.Title)
-
+    useEffect(()=>{
+        AOS.init({
+          duration:1000,
+          
+        },[]);
+    
+      })
   return (
-    <ArticalsStyled className='container'>
+    <ArticalsStyled className='container' data-aos="fade-up ">
         <div className="postHeader">
             <h3>{Articales.Title}</h3>
             <div className='subtitle'>

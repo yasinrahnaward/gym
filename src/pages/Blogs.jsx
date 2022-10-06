@@ -8,6 +8,7 @@ import { Autoplay, Navigation, Pagination } from 'swiper'
 import styled from 'styled-components'
 import Blog from '../components/Blog/Blog'
 import Footer from '../components/Footer'
+import NavMenu from '../components/NavMenu'
 const images=[image1,image2,image3];
 
 const BlogStyle=styled.div`
@@ -30,6 +31,7 @@ const Blogs = () => {
   }
   return (
     <BlogStyle>
+      <NavMenu/>
       <div>
       <Header
        heroImages={images}

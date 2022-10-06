@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const RecentArticlastyle=styled.div`
 
 display: flex;
@@ -28,14 +29,21 @@ export const RecentArtical = (
         date="october 8,2022"
     }
 ) => {
+    useEffect(()=>{
+        AOS.init({
+          duration:1000,
+          
+        },[]);
+    
+      })
   return (
-    <RecentArticlastyle>
-        <div className="image"
+    <RecentArticlastyle data-aos="fade-up">
+        <div className="image"  
         style={{backgroundImage: `url(${image})`,
         backgroundSize:'cover',
         }}> </div>
 
-        <div className='Title'>
+        <div className='Title' >
             <h4>{title}</h4>
             <p>{date}</p>
         </div>

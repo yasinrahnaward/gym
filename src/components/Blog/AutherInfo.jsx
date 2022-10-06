@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Articales from '../../assets/data/Articales'
 import Buttons from '../Buttons'
 import SocialMedia from '../SocialMedia'
 import BlogSectionTitle from './BlogSectionTitle'
 import { RecentArtical } from './RecentArtical'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const AutherInfoStyle=styled.div`
     
       width: 100%;
@@ -48,21 +50,28 @@ const AutherInfoStyle=styled.div`
   
 `;
 const AutherInfo = () => {
+  useEffect(()=>{
+    AOS.init({
+      duration:1000,
+      
+    },[]);
+
+  })
   return (
     <AutherInfoStyle>
             <div className="Autherbio">
                 <BlogSectionTitle text='About Auther'/>
-                <div className='autherphoto'
+                <div className='autherphoto' data-aos="fade-up"
                  style={{backgroundImage: `url(${Articales[0].AutherPhoto})`,
                  backgroundSize:'cover'
                  }}>
 
                 </div>
-                <p className='aboutAutherText'>
+                <p className='aboutAutherText' data-aos="fade-up">
                   {Articales[0].aboutAuther}
                 </p>
             </div>
-            <div className='socialMedia'>
+            <div className='socialMedia' data-aos="fade-up">
               <BlogSectionTitle text='Follow Me'/>
               <SocialMedia />
             </div>
@@ -71,7 +80,7 @@ const AutherInfo = () => {
               <RecentArtical image={Articales[0].ArticalImg} title={Articales[0].Title} date={Articales[0].Date}/>
               <RecentArtical image={Articales[0].ArticalImg} title={Articales[0].Title} date={Articales[0].Date}/>
               <RecentArtical image={Articales[0].ArticalImg} title={Articales[0].Title} date={Articales[0].Date}/>
-              <form>
+              <form data-aos="fade-up">
                  <label>Search
                  </label>
                   <input type="text" />

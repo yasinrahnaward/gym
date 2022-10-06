@@ -1,11 +1,11 @@
 import React from 'react'
-import SinglePage from '../components/Blog/SinglePage'
-
-import Articales from '../assets/data/Articales'
+import NavMenu from '../components/NavMenu'
 
 const Contact = () => {
   return (
-    <div></div>
+    <div>
+      <NavMenu/>
+    </div>
   )
 }
 

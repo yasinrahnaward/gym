@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components';
 
 import { IoIosMail } from "react-icons/io";
@@ -6,6 +6,8 @@ import { MdWrongLocation } from "react-icons/md";
 
 import { FaPhoneSquare } from "react-icons/fa";
 import FooterContacItem from './Home/FooterContacItem'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const FooterSectionStyl=styled.div`
 padding: 2rem;
 position: relative;
@@ -38,16 +40,25 @@ display: block;
 
 `;
 const Footer = () => {
+    useEffect(()=>{
+        AOS.init({
+          duration:1000,
+          
+        },[]);
+    
+      })
   return (
     <FooterSectionStyl>
+              
+
         <div className="Footercontainer">
             <div className="FirstRow">
 
             </div>
-            <div className="SecondRow">
-                <FooterContacItem className="contact" itemIcon={<MdWrongLocation/>} itemText="110 district kabul Rd, Rindge,NH 03461"/>
-                <FooterContacItem className="contact" itemIcon={<FaPhoneSquare/>} itemText="125-711-811 | 125-668-886"/>
-                <FooterContacItem className="contact" itemIcon={<IoIosMail/>} itemText="Support.gymcenter@gmail.com"/>
+            <div className="SecondRow" data-aos="fade-up">
+                <FooterContacItem  className="contact" itemIcon={<MdWrongLocation/>} itemText="110 district kabul Rd, Rindge,NH 03461"/>
+                <FooterContacItem  className="contact" itemIcon={<FaPhoneSquare/>} itemText="125-711-811 | 125-668-886"/>
+                <FooterContacItem  className="contact" itemIcon={<IoIosMail/>} itemText="Support.gymcenter@gmail.com"/>
                 
             </div>
             <div className="TriedRaw">

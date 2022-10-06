@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import BlogSectionTitle from './BlogSectionTitle';
 import Articales from '../../assets/data/Articales'
 import Artical from './Articals';
 import AutherInfo from './AutherInfo';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 console.log(Articales[0].AutherPhoto)
 const BlogStyle=styled.div`
@@ -37,6 +39,7 @@ justify-content: center;
       .MainSection{
         margin: auto;
         width: 80%;
+        
       }
       .Autherinfo{
         margin:5rem auto;
@@ -47,11 +50,17 @@ justify-content: center;
 
 `;
 const Blog = () => {
+  useEffect(()=>{
+    AOS.init({
+      duration:1000,
+      
+    },[]);
 
+  })
 
   return (
     <BlogStyle>
-          <div className="MainSection">
+          <div className="MainSection"  data-aos="fade-up">
             <div className="popularArticals">
             <BlogSectionTitle text='Popular Articals'/>
               {
@@ -62,7 +71,7 @@ const Blog = () => {
                   {
                     return <Artical key={index}
                      Articales={value}
-                      />
+                       />
                   }
                 })
               }
@@ -78,7 +87,7 @@ const Blog = () => {
               }
             </div>
           </div>
-          <div className='Autherinfo'>
+          <div className='Autherinfo'  data-aos="fade-up">
           <AutherInfo/>
           </div>
     </BlogStyle>

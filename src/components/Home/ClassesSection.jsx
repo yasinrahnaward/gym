@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SectionTitle from '../SectionTitle';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore ,{ Navigation, Pagination  } from 'swiper';
@@ -9,6 +9,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 SwiperCore.use([Navigation]);
 
@@ -77,10 +80,17 @@ box-shadow: 0px 0px 12px 8px var(--deep-dark);
 `;
 const ClassesSection = () => {
 
+    useEffect(()=>{
+        AOS.init({
+          duration:1000,
+          
+        },[]);
+    
+      })
     return (
-    <ClassSectionstyle className='Container'>
+    <ClassSectionstyle className='Container' data-aos="fade-up">
          <SectionTitle subTitle='Unlimited Classes' Title='WHAT WE CAN OFFER'/>
-        <div className="ClassesItems">
+        <div className="ClassesItems" data-aos="fade-up">
             <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={50}

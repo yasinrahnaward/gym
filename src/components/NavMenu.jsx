@@ -167,12 +167,12 @@ const NavMenu = () => {
             </ul>
             <ul className=' signinout'>
                 <li>
-                    <Link to="/log in" >
+                    <Link to="/login" >
                         Sign in 
                     </Link>
                 </li>
                 <li>
-                    <Link to="/sign up" >
+                    <Link to="/registeration" >
                         Sign up
                     </Link>
                 </li>
@@ -207,12 +207,12 @@ const NavMenu = () => {
                     </Link>
                 </li>
                 <li className='Auth'>
-                    <Link to="/log in" onClick={()=>setNav(!nav)} >
-                        Sign in 
+                    <Link to="/login" onClick={()=>setNav(!nav)} >
+                        Sign In 
                     </Link>
                 </li>
                 <li className='Auth'>
-                    <Link to="/sign up" onClick={()=>setNav(!nav)} >
+                    <Link to="/registeration" onClick={()=>setNav(!nav)} >
                         Sign up
                     </Link>
                 </li>

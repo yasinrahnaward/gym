@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Buttons from '../Buttons';
 import PargraphText from "../PargraphText";
 import SectionTitle from '../SectionTitle'
 
 import aboutImageSecond from "../../assets/About/about-02.png";
 import styled from 'styled-components';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
     const AboutSectionStyle=styled.div`
     padding: 9rem 0;
     border-bottom: 2px solid var(--deep-dark-1);
@@ -72,10 +75,17 @@ import styled from 'styled-components';
     }
     `;
 const AboutSection = () => {
+    useEffect(()=>{
+        AOS.init({
+          duration:1000,
+          
+        },[]);
+    
+      })
   return (
     <AboutSectionStyle>
-        <div className='Container'>
-            <div className="leftside">
+        <div className='Container' data-aos="fade-up">
+            <div className="leftside" data-aos="fade-up">
                 <SectionTitle subTitle='Introduction' Title='About Us'/>
                 <PargraphText>
                     Whether you want to lose weight, tone up, improve strength, or just
@@ -88,7 +98,7 @@ const AboutSection = () => {
                     <Buttons outline={false} btnLink="/blogs" btnText="Join Us"></Buttons>
                 </div>
             </div>
-            <div className="rightside">
+            <div className="rightside" data-aos="fade-up">
           <img src={aboutImageSecond} alt=""></img>
             </div>
         </div>

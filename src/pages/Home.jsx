@@ -10,7 +10,10 @@ import image2 from '../assets/Header/header2.jpg';
 import image3 from '../assets/Header/header3.jpg';
 import image4 from '../assets/Header/header4.jpg';
 import { Autoplay, Navigation, Pagination } from 'swiper'
+import NavMenu from '../components/NavMenu'
+import styled from 'styled-components'
 const images=[image1,image2,image3,image4];
+
 
 const Home = () => {
   const params = {
@@ -28,6 +31,7 @@ const Home = () => {
   }
   return (
     <div>
+      <NavMenu/>
       <Header
        heroImages={images}
        headerSubTitle="WE PLAN YOUR HEALTH & FITNESS SUCCESS"

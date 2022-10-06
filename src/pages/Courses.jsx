@@ -1,8 +1,11 @@
 import React from 'react'
+import NavMenu from '../components/NavMenu'
 
 const Courses = () => {
   return (
-    <h1>this is the Courses pages</h1>
+    <div>
+      <NavMenu/>
+    </div>
   )
 }
 

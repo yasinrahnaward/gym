@@ -1,16 +1,17 @@
 import './App.css';
-import NavMenu from './components/NavMenu';
 import {BrowserRouter, Routes,Route, } from 'react-router-dom'
 import Home from './pages/Home'
 import Blogs from './pages/Blogs'
 import Contact from './pages/Contact'
 import Courses from './pages/Courses'
 import SinglePage from './components/Blog/SinglePage';
+import LoginForm from './components/Auth/LoginForm';
+import Registeration from './components/Auth/Registeration'
 function App() {
   return (
 
   <BrowserRouter>
-    <NavMenu/>
+    
       <Routes>
         <Route path='/blogs' element={<Blogs/>}/>
       </Routes>
@@ -25,6 +26,12 @@ function App() {
       </Routes>
       <Routes>
         <Route path='/' element={<Home/>}/>
+      </Routes>
+      <Routes>
+        <Route path='/login' element={<LoginForm/>}/>
+      </Routes>
+      <Routes>
+        <Route path='/registeration' element={<Registeration/>}/>
       </Routes>
   </BrowserRouter>
   );

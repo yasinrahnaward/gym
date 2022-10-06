@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HiMail } from "react-icons/hi";
 import styled from 'styled-components';
 const FooterContacItemStyle=styled.div`
@@ -33,10 +33,11 @@ const FooterContacItem = ({
   itemIcon=<HiMail/>,
   itemText='this is palceholder for your text'
 }) => {
+
   return (
     <FooterContacItemStyle>
 
-      <div className="itemcontainer">
+      <div className="itemcontainer" >
         {itemIcon}
         <p>{itemText}</p>
       </div>

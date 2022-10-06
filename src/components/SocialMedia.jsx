@@ -30,7 +30,7 @@ const SocialMedia = ({
 
 }) => {
   return (
-    <SocialMediaStyle>
+    <SocialMediaStyle className='socialMedia'>
         <Link to={linkedinlink} >
             <IoLogoLinkedin/>
         </Link>

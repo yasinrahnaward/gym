@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import AutherInfo from './AutherInfo';
 import Footer from '../Footer'
 import {IoChevronBackCircleOutline} from 'react-icons/io5';
 import { Link, useLocation } from 'react-router-dom';
+import NavMenu from '../NavMenu'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const SinglePageStyled=styled.div`
 
 .container{
@@ -53,9 +56,9 @@ const SinglePageStyled=styled.div`
     }
     @media only screen and (max-width:995px){
         .container{
-
             flex-direction: column;
             .mainContent{
+                
                 margin: auto;
                 width: 80%;
             }
@@ -71,12 +74,19 @@ const SinglePageStyled=styled.div`
 const SinglePage = (
 {props}
 ) => {
+    useEffect(()=>{
+        AOS.init({
+          duration:1000,
+          
+        },[]);
     
+      })
     const location=useLocation()
     const Articale=location.state
     console.log(Articale)
     return (
-    <SinglePageStyled >
+    <SinglePageStyled data-aos="fade-up">
+        <NavMenu/>
         <div className='container'>
             <div className="mainContent">
             <h3>{Articale.Title}</h3>
@@ -92,7 +102,7 @@ const SinglePage = (
                     width:'100%'
             }}></div>
                 <div className="post">
-                    <p className='subhead'>
+                    <p className='subhead' data-aos="fade-up">
                         {Articale.ArticalText}
                     </p>
                 </div>
