@@ -55,17 +55,8 @@ const Articals = (
     }
 ) => {
     const slice=Articales.ArticalText.slice(0,150);
-    console.log(Articales)
-    console.log(Articales.Title)
-    useEffect(()=>{
-        AOS.init({
-          duration:1000,
-          
-        },[]);
-    
-      })
   return (
-    <ArticalsStyled className='container' data-aos="fade-up ">
+    <ArticalsStyled className='container'>
         <div className="postHeader">
             <h3>{Articales.Title}</h3>
             <div className='subtitle'>

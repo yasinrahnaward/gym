@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 const ButtonStyle=styled.div`
 
@@ -37,15 +36,9 @@ a{
 
 `;
 const Buttons = ({btnLink,btnText="button",outline=false}) => {
-    useEffect(()=>{
-        AOS.init({
-          duration:1000,
-          
-        },[]);
-    
-      })
+
   return (
-    <ButtonStyle outline={outline} className="btnwrapper" data-aos="fade-up">
+    <ButtonStyle outline={outline} className="btnwrapper" >
         <Link className='btn' to={btnLink}>
             {btnText}
         </Link>

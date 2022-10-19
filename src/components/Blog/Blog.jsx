@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import BlogSectionTitle from './BlogSectionTitle';
 import Articales from '../../assets/data/Articales'
 import Artical from './Articals';
 import AutherInfo from './AutherInfo';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
@@ -50,17 +49,11 @@ justify-content: center;
 
 `;
 const Blog = () => {
-  useEffect(()=>{
-    AOS.init({
-      duration:1000,
-      
-    },[]);
 
-  })
 
   return (
     <BlogStyle>
-          <div className="MainSection"  data-aos="fade-up">
+          <div className="MainSection"  >
             <div className="popularArticals">
             <BlogSectionTitle text='Popular Articals'/>
               {
@@ -81,13 +74,12 @@ const Blog = () => {
             <div className="latestArticles">
               {
                 Articales.map((value,index)=>{
-                  console.log(index ,value)
                   return <Artical key={index} Articales={value}/>
                 })
               }
             </div>
           </div>
-          <div className='Autherinfo'  data-aos="fade-up">
+          <div className='Autherinfo'  >
           <AutherInfo/>
           </div>
     </BlogStyle>
