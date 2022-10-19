@@ -141,7 +141,7 @@ const Header = ({
                                       backSpeed={10}
                                       loop
                                     />
-                                    <Buttons btnLink='/home' btnText='Try Your Free Trial' outline={false}/>
+                                    <Buttons btnLink='#' btnText='Try Your Free Trial' outline={false}/>
                                 </div>
                             </SwiperSlide>
     

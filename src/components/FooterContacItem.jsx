@@ -3,6 +3,7 @@ import { HiMail } from "react-icons/hi";
 import styled from 'styled-components';
 const FooterContacItemStyle=styled.div`
 .itemcontainer{
+  width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;

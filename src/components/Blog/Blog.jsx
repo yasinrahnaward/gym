@@ -7,7 +7,7 @@ import AutherInfo from './AutherInfo';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-console.log(Articales[0].AutherPhoto)
+
 const BlogStyle=styled.div`
 margin:auto;
 display: flex;

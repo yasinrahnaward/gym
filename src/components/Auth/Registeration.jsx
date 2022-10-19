@@ -1,6 +1,5 @@
 import React,{useEffect} from "react";
 import Buttons from "../Buttons";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper";

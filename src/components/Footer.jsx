@@ -5,7 +5,7 @@ import { IoIosMail } from "react-icons/io";
 import { MdWrongLocation } from "react-icons/md";
 
 import { FaPhoneSquare } from "react-icons/fa";
-import FooterContacItem from './Home/FooterContacItem'
+import FooterContacItem from './FooterContacItem'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 const FooterSectionStyl=styled.div`
